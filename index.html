@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu X Gamer - Gaming Content & Editing Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0f0f1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6e00ff 0%, #ff00aa 100%);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff00aa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #6e00ff;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #6e00ff, #ff00aa);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #6e00ff, #ff00aa);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .social-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);border-radius: 10px;
+            padding: 20px;
+            width: 160px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .social-card.youtube i {
+            color: #ff0000;
+        }
+        
+        .social-card.telegram i {
+            color: #0088cc;
+        }
+        
+        .social-card.instagram i {
+            color: #e1306c;
+        }
+        
+        .social-card.discord i {
+            color: #7289da;
+        }
+        
+        .social-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .content-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .content-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-content h3 {
+            color: #6e00ff;
+            margin-bottom: 10px;
+        }
+        
+        .tips-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tip {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #6e00ff;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .about {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Himanshu X Gamer</div>
+        <div class="tagline">Gaming Content • Editing Tips • Community</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#links">Social Links</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#editing">Editing Tips</a></li>
+                <li><a href="#growth">Growth Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about" class="about">
+            <div class="about-text">
+                <h2>Welcome Gamers!</h2>
+                <p>Hey everyone! I'm Himanshu, a passionate gamer and content creator. On this channel, you'll find epic gameplay, funny moments, and expert tips to level up your gaming skills.</p>
+                <p>I specialize in FPS games, battle royales, and open-world adventures. Join me on this gaming journey and let's build an amazing community together!</p>
+                <a href="https://www.youtube.com/c/HimanshuXGamer" class="btn">Subscribe to YouTube</a></div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Gaming Setup">
+            </div>
+        </section>
+
+        <section id="links">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="social-links">
+                <div class="social-card youtube">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/c/HimanshuXGamer">YouTube</a>
+                </div>
+                <div class="social-card telegram">
+                    <i class="fab fa-telegram"></i>
+                    <a href="https://t.me/HimanshuXGamer">Telegram</a>
+                </div>
+                <div class="social-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/HimanshuXGamer">Instagram</a>
+                </div>
+                <div class="social-card discord">
+                    <i class="fab fa-discord"></i>
+                    <a href="https://discord.gg/HimanshuXGamer">Discord</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="content">
+            <h2 class="section-title">My Content</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Gameplay">
+                    <div class="card-content">
+                        <h3>Gameplay Videos</h3>
+                        <p>Watch me play the latest games with expert commentary and tips to improve your skills.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1614294149710-32eec425a251?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Live Stream">
+                    <div class="card-content">
+                        <h3>Live Streaming</h3>
+                        <p>Join me for live gameplay, Q&A sessions, and community interactions.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Tutorial">
+                    <div class="card-content">
+                        <h3>Editing Tutorials</h3>
+                        <p>Learn how to edit your gaming videos like a pro with my step-by-step guides.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="editing" class="tips-section">
+            <h2 class="section-title">Video Editing Tips</h2>
+            <div class="tip">
+                <h3>1. Master the Basics First</h3>
+                <p>Learn your editing software inside out. Understand cutting, transitions, and basic effects before moving to advanced techniques.</p>
+            </div>
+            <div class="tip">
+                <h3>2. Keep Your Audience Engaged</h3>
+                <p>Use fast cuts during intense moments and slower pacing during storytelling segments. Add memes and sound effects for comedic effect.</p>
+            </div>
+            <div class="tip">
+                <h3>3. Color Grading Matters</h3>
+                <p>Develop a consistent color palette for your videos. This creates brand recognition and makes your content look more professional.</p></div>
+            <div class="tip">
+                <h3>4. Sound Design is Key</h3>
+                <p>Great audio can make or break a video. Use background music, sound effects, and clean voiceovers to enhance viewer experience.</p>
+            </div>
+            <div class="tip">
+                <h3>5. Create a Signature Style</h3>
+                <p>Develop intro/outro sequences, transition styles, and effects that become your signature. This helps with channel branding.</p>
+            </div>
+        </section>
+
+        <section id="growth" class="tips-section">
+            <h2 class="section-title">How to Grow Your Channel</h2>
+            <div class="tip">
+                <h3>1. Consistency is Key</h3>
+                <p>Upload regularly and stick to a schedule. This helps YouTube's algorithm and lets your audience know when to expect new content.</p>
+            </div>
+            <div class="tip">
+                <h3>2. Engage With Your Community</h3>
+                <p>Respond to comments, create polls, and listen to feedback. Your community is your biggest asset.</p>
+            </div>
+            <div class="tip">
+                <h3>3. Collaborate With Other Creators</h3>
+                <p>Collaborations expose your channel to new audiences. Find creators with similar content and viewer demographics.</p>
+            </div>
+            <div class="tip">
+                <h3>4. Optimize Your Videos</h3>
+                <p>Use relevant titles, descriptions, and tags. Create custom thumbnails that stand out and make people want to click.</p>
+            </div>
+            <div class="tip">
+                <h3>5. Analyze Your Performance</h3>
+                <p>Study your analytics to understand what works and what doesn't. Double down on successful content formats.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 Himanshu X Gamer. All Rights Reserved.</p>
+        <p>This website is dedicated to gaming content and community building.</p>
+    </footer>
+</body>
+</html>
